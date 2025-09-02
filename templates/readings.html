@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Soil Moisture Readings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(to right, #a8e063, #56ab2f); /* Green gradient */
+        }
+        h1 {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000000;
+            text-align: center;
+            text-decoration: wavy;
+        }
+        ul {
+            list-style-type: decimalsss;
+            padding: 0;
+        }
+        li {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .moisture-box {
+            width: 5%; /* Decrease the width */
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #e6ffe6;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Soil Moisture Readings</h1>
+    <ul>
+        {% for reading in readings %}
+            <li>Moisture Value: {{ reading.moisture_value }} ({{ reading.timestamp }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

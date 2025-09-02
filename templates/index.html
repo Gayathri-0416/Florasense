@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Moisture Status</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+        body {
+            font-family: "Rubik Doodle Shadow", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('../static/images/background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0,0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #fff(0, 0, 0, 0.1);
+            color: aquamarine;
+        }
+        .container h1 {
+            color: #fff; 
+            padding-bottom: 10px; 
+        }
+        .status {
+            text-decoration: dotted underline;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .moisture-reading {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .live-status {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            background: rgb(114, 235, 116);
+            color: #fff;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px rgb(114, 235, 116);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Soil Moisture Status:</h1>
+        <p class="status">{{ status }}</p>
+        <p class="moisture-reading">Moisture Reading: {{ moisture_value }}</p>
+        
+    </div>
+</body>
+</html>
